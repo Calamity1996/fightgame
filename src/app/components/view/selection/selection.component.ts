@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Charter } from 'src/app/classes/Character';
+import { SelectionpgService } from 'src/app/service/selectionpg.service';
 
 @Component({
   selector: 'app-selection',
@@ -12,6 +13,7 @@ export class SelectionComponent implements OnInit {
     { // TOT 255
       name : "Ninja",
       charId : 1,
+      lifePoints : 1500,
       str : 60,
       def : 45,
       dex : 100,
@@ -22,6 +24,7 @@ export class SelectionComponent implements OnInit {
     {
       name : "Arrow",
       charId : 2,
+      lifePoints : 1600,
       str : 65,
       def : 50,
       dex : 90,
@@ -32,6 +35,7 @@ export class SelectionComponent implements OnInit {
     {
       name : "Titan",
       charId : 3,
+      lifePoints : 800,
       str : 100,
       def : 100,
       dex : 30,
@@ -42,6 +46,7 @@ export class SelectionComponent implements OnInit {
     {
       name : "Wizard",
       charId : 4,
+      lifePoints : 1900,
       str : 40,
       def : 90,
       dex : 25,
@@ -52,6 +57,7 @@ export class SelectionComponent implements OnInit {
     {
       name : "Thunder",
       charId : 5,
+      lifePoints : 1600,
       str : 40,
       def : 45,
       dex : 70,
@@ -62,6 +68,7 @@ export class SelectionComponent implements OnInit {
     {
       name : "Sword",
       charId : 6,
+      lifePoints : 1400,
       str : 100,
       def : 60,
       dex : 60,
@@ -72,6 +79,7 @@ export class SelectionComponent implements OnInit {
     {
       name : "Snake",
       charId : 7,
+      lifePoints : 1300,
       str : 55,
       def : 80,
       dex : 70,
@@ -82,6 +90,7 @@ export class SelectionComponent implements OnInit {
     {
       name : "Fist",
       charId : 8,
+      lifePoints : 1100,
       str : 90,
       def : 75,
       dex : 75,
@@ -92,6 +101,7 @@ export class SelectionComponent implements OnInit {
     {
       name : "Atlantis",
       charId : 9,
+      lifePoints : 2000,
       str : 40,
       def : 50,
       dex : 80,
@@ -100,13 +110,19 @@ export class SelectionComponent implements OnInit {
       urlimg : "/assets/img/charter/charter9.png"
     }
   ];
-  constructor() { }
+  constructor(
+    public selectionpgService : SelectionpgService
+  ) { }
 
   ngOnInit(): void {
   }
 
   getTotalChar = () => {
     return this.chart;
+  }
+
+  getNumberOfCharacters = () : number => {
+    return this.chart.length;
   }
 
 

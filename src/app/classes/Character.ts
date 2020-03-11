@@ -1,6 +1,7 @@
 export class Charter{
     public name : string;
     public charId : number;
+    public lifePoints : number;
     public str : number;
     public def : number;
     public dex : number;

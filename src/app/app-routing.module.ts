@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { IndexComponent } from './components/view/index/index.component';
-import { FightComponent } from './components/common/fight/fight.component';
+import { FightComponent } from './components/view/fight/fight.component';
 import { CharterComponent } from './components/common/charter/charter.component';
 import { MatchComponent } from './components/view/match/match.component';
 import { SelectionComponent } from './components/view/selection/selection.component';

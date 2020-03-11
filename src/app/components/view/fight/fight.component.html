@@ -1,0 +1,7 @@
+<div class="row">
+    <div class="col-6" *ngFor="let c of selectionpgService.characters">
+        <img src="{{c.urlimg}}" class="clickable img2">
+        {{c.charId}}, {{c.name}}
+    </div>
+    <input type="submit" value="Lotta" (click)="fightService.play( selectionpgService.characters[0], selectionpgService.characters[1])">
+</div>

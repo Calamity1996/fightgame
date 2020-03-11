@@ -6,10 +6,13 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/common/header/header.component';
 import { IndexComponent } from './components/view/index/index.component';
 import { CharterComponent } from './components/common/charter/charter.component';
-import { FightComponent } from './components/common/fight/fight.component';
+import { FightComponent } from './components/view/fight/fight.component';
 import { MatchComponent } from './components/view/match/match.component';
 import { SelectionComponent } from './components/view/selection/selection.component';
 import { TournamentcompComponent } from './components/view/tournamentcomp/tournamentcomp.component';
+import { CharactersService } from 'init/src/app/service/characters.service';
+import { FightService } from 'init/src/app/service/fight.service';
+import { SelectionpgService } from 'init/src/app/service/selectionpg.service';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,13 @@ import { TournamentcompComponent } from './components/view/tournamentcomp/tourna
     BrowserModule,
     AppRoutingModule
   ],
+  /*
+  providers: [
+    SelectionpgService,
+    CharactersService,
+    FightService,
+  ],
+  */
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -12,18 +12,16 @@
    <div class="five"><img src="/assets/img/charter/charter10.png" class="clickable img1"></div>
 </div>
 -->
+<div class="row" >        
+    <div class="col-4" *ngFor="let charter of chart">
+        <img src="{{charter.urlimg}}" class="clickable img2" (click)="selectionpgService.insertInFight(charter)">
+        <div *ngIf="selectionpgService.fightStart()">
+            <div routerLink="/fight"></div>
+        </div>
+    </div>    
+</div>
 <div class="row">
-   
-      
-        
-            <div class="col-4" *ngFor="let charter of chart; let i = index ;">
-                <img src="{{charter.urlimg}}" class="clickable img2">
-            </div>
-                 
-
-            
-       
-    
+    <div class="col"><input type="submit" routerLink="/fight" value="Combatti" ></div>
 </div>
    
 <!--
