@@ -1,0 +1,19 @@
+.f {
+    font-size: 20pt;
+    color: red;
+   
+    padding-top: 8%;
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+}
+.pad{
+    padding-top: 1%;
+    
+}
+.input{
+    border: 1px solid red;
+    background-color: tomato;
+}

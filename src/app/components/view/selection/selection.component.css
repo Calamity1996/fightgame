@@ -1,0 +1,120 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0px;
+    grid-auto-rows: minmax(60px, auto);
+    border-top: solid;
+    border-left: solid;
+    border-bottom: solid;
+    border-right: solid;
+    border-radius: 5px;
+    max-width: 60%;
+    max-height: 100%;
+  }
+  .one {
+    display: flex;
+    grid-column: 1;
+    grid-row: 1;
+    border-right: solid;
+    border-bottom: solid;
+    padding: 0%;
+  }
+  .two { 
+    display: flex;
+    grid-column: 2;
+    grid-row: 1;
+    border-right: solid;
+    border-bottom: solid;
+    border-left: solid;
+  }
+  .three {
+    display: flex;
+    grid-column: 3;
+    grid-row: 1;
+    border-bottom: solid;
+    border-left: solid;
+  }
+  .four {
+    display: flex;
+    grid-column: 1;
+    grid-row: 2;
+    border-right: solid;
+    border-bottom: solid;
+    border-top: solid;
+  }
+  .five {
+    display: flex;
+    grid-column: 2;
+    grid-row: 2;
+    border-right: solid;
+    border-bottom: solid;
+    border-left: solid;
+    border-top: solid;
+  }
+  .six {
+    display: flex;
+    grid-column: 3;
+    grid-row: 2;
+    border-bottom: solid;
+    border-left: solid;
+    border-top: solid;
+  }
+  .seven {
+    display: flex;
+    grid-column: 1;
+    grid-row: 3;
+    border-right: solid;
+    border-top: solid;
+  }
+  .eight {
+    display: flex;
+    grid-column: 2;
+    grid-row: 3;
+    border-right: solid;
+    border-left: solid;
+    border-top: solid;
+  }
+  .nine {
+    display: flex;
+    grid-column: 3;
+    grid-row: 3;
+    border-left: solid;
+    border-top: solid;
+  }
+  .ten {
+    grid-column: 1;
+    grid-row: 4;
+  }
+  .img1{
+    max-width: 65%;
+    height: auto;
+  }
+  .img2{
+    max-width: 45%;
+    height: auto; 
+    display:flex;
+   
+    flex-direction: row;
+  }
+
+  .test{
+    flex-direction: row;
+  }
+  .img3{
+    max-width: 40%;
+    height: auto;
+  }
+  .img4{
+    max-width: 55%;
+    height: auto;
+  }
+  .img-wrap{
+    position: relative;
+    padding: 100% 0 0 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .col-4 {
+    width: 33.33%;
+  }

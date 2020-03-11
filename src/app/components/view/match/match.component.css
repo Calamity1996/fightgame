@@ -1,0 +1,20 @@
+.container{
+    width: 100%;
+
+}
+.rowOption {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    margin-right: 10px;
+  }
+.rchars{
+    padding-top: 3%;
+    padding-left: 30%;
+}
+.chars{
+    padding-left: 35%;
+}
+.img{
+    padding-top: 10%;
+}

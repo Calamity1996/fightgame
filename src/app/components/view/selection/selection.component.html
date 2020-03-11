@@ -1,0 +1,37 @@
+<!--
+<div class="container">
+   <div class="one"><img src="/assets/img/charter/charter1.png" class="clickable img2"></div>
+   <div class="two"><img src="/assets/img/charter/charter2.png" class="clickable img2"></div>
+   <div class="three"><img src="/assets/img/charter/charter3.png" class="clickable img2"></div>
+   <div class="four"><img src="/assets/img/charter/charter4.png" class="clickable img2"></div>
+   <div class="five"><img src="/assets/img/charter/charter10.png" class="clickable img1"></div>
+   <div class="six"><img src="/assets/img/charter/charter6.png" class="clickable img2"></div>
+   <div class="seven"><img src="/assets/img/charter/charter7.png" class="clickable img2"></div>
+   <div class="eight"><img src="/assets/img/charter/charter8.png" class="clickable img2"></div>
+   <div class="nine"><img src="/assets/img/charter/charter9.png" class="clickable img4"></div>
+   <div class="five"><img src="/assets/img/charter/charter10.png" class="clickable img1"></div>
+</div>
+-->
+<div class="row">
+   
+     <div class="row">   
+        <ng-container  *ngFor="let charter of chart; let i = index ;" class="test">
+            <div class="col-4">
+                <img src="{{charter.urlimg}}" class="clickable img2">
+            </div>
+                 
+
+            
+        </ng-container>
+    </div>
+</div>
+   
+<!--
+        <div class="col-4 " *ngFor="let charter of chart; let even = even; let odd = odd;">
+            <div *ngIf="even"><img src="{{charter.urlimg}}" class="clickable img2"></div>
+            <div *ngIf="odd"><img src="{{charter.urlimg}}" class="clickable img2"></div>
+            Name : {{charter.name}}
+        </div>
+    
+</div>
+-->
