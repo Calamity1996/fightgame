@@ -14,16 +14,16 @@
 -->
 <div class="row">
    
-     <div class="row">   
-        <ng-container  *ngFor="let charter of chart; let i = index ;" class="test">
-            <div class="col-4">
+      
+        
+            <div class="col-4" *ngFor="let charter of chart; let i = index ;">
                 <img src="{{charter.urlimg}}" class="clickable img2">
             </div>
                  
 
             
-        </ng-container>
-    </div>
+       
+    
 </div>
    
 <!--
