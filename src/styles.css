@@ -1,10 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 .html,body{
     background-image: url("src\assets\img\environment\background_one.gif");
-    background-repeat: no-repeat;
-    background-size: 1580px;
+    background-repeat: no-repeat center top;   
     width: 100%;
-    height: auto;
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: -1;
 }
 .head{
     background-image: url("src\assets\img\logo.png");

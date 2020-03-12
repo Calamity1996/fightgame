@@ -28,11 +28,13 @@ export class SelectionpgService {
       if(!this.isPgAlreadyTaken(character) && this.characters.length < 2){
           console.log(character);
           this.characters.push(character);
+         // document.write("")
       }
       /*
       if(this.characters.length == 2)
         alert("Hai già selezionato 2 personaggi");
       */
+    
       console.log(this.getTotalChar());
   }
 

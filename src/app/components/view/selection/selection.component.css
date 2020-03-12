@@ -118,3 +118,48 @@
   .col-4 {
     width: 33.33%;
   }
+  .col-3{
+    padding-bottom: 3px;
+  }
+  .col{
+    border: solid;
+    padding: 2%;
+    background-color: rgba(0, 0, 0, 0.678);
+  }
+  .col:hover{
+    background-color: rgba(255, 0, 0, 0.39);
+  }
+  .dimcard{
+    width: 181px;
+    height: 200px;
+  }
+
+  .card{
+    /*background-color: rgba(184, 135, 11, 0);*/
+    background-color: rgba(0, 0, 0, 0.678);
+    
+  }
+  .card:hover{
+    background-color: rgba(255, 0, 0, 0.39);
+  }
+  
+  .card-body{
+    background-color: rgb(0, 0, 0);
+  }
+
+  p{
+    font: 10pt bold;
+    color: red;
+  }
+
+  .btn{
+    text-align: center;
+  }
+
+  .dimimg{
+    width: 300px;
+    height: 350px;
+  }
+  .pg{
+    background-color: black;
+  }

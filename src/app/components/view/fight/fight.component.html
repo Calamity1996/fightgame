@@ -1,7 +1,34 @@
-<div class="row">
-    <div class="col-6" *ngFor="let c of selectionpgService.characters">
-        <img src="{{c.urlimg}}" class="clickable img2">
-        {{c.charId}}, {{c.name}}
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom">
+    <a class="navbar-brand logo" href="#">Logo</a>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <input type="submit" value="STATUS PG1" class="btn btn-primary">
+          </li>
+      <li class="nav-item">
+        <input type="submit" value="FIGHT" class="btn btn-primary fightbtn"
+        (click)="fightService.play( selectionpgService.characters[0], selectionpgService.characters[1])"
+        >
+      </li>
+      <li class="nav-item">
+        <input type="submit" value="STATUS PG2" class="btn btn-primary">
+      </li>
+    </ul>
+  </nav>
+
+
+<div class="row" >
+    <div class="col 4" *ngFor="let c of selectionpgService.characters; let i=index ;">          
+        <p class="pg"> >> PLAYER {{i+1}}     </p> 
+        <img src="{{c.urlimg}}" class="dimimg">
+        <p>{{c.name}} </p>
+        <p>>> LIFEPOINTS LEFT : {{c.lifePoints}} </p>
+        <p>>> SKILL ? {{c.skill}}</p>
     </div>
-    <input type="submit" value="Lotta" (click)="fightService.play( selectionpgService.characters[0], selectionpgService.characters[1])">
+    <!--<input class="form-control textarea" type="text" id="textArea" readonly>-->
+    
+    
+    <!-- (click)="fightService.writeStatus()"> -->
+</div>
+<div class="row stat">
+
 </div>

@@ -7,6 +7,7 @@ import {Router} from '@angular/router';
 })
 export class FightService {
 
+  public status : string = "Ciao";
   public pg1Turn : boolean = true;
   public characters : Charter[] = [];
   constructor(
@@ -30,6 +31,7 @@ play = ( player1 : Charter , player2 : Charter ) => {
       if(this.hit()){
         this.characters[1].lifePoints -= this.characters[0].dex + this.characters[0].str + this.characters[0].int - this.characters[0].def;
         console.log(this.characters[1].lifePoints);
+        //this.writeStatus ("PLAYER2 LIFEPOINTS >> " + this.characters[1].lifePoints);
       }
       else console.log("PLAYER1 MISS!");
     }
@@ -38,6 +40,8 @@ play = ( player1 : Charter , player2 : Charter ) => {
     if(this.hit()){
       this.characters[0].lifePoints -= this.characters[1].dex + this.characters[1].str + this.characters[1].int - this.characters[1].def;
       console.log(this.characters[1].lifePoints);
+      status += "HIT: " + this.characters[1].lifePoints + "\n";
+      console.log("... "+this.status);
     }
     else console.log("PLAYER2 MISS!");
   }
@@ -50,8 +54,6 @@ play = ( player1 : Charter , player2 : Charter ) => {
     this.router.navigateByUrl('/');
   }
 }
-
-
 
 
 }
