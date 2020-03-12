@@ -17,3 +17,18 @@
     border: 1px solid red;
     background-color: tomato;
 }
+.container{
+    margin-left: 37%;
+    justify-content: center;
+}
+.row{
+    margin-bottom: 2%;
+    
+}
+.col-1{
+    margin-left: 1%;
+    color: red;
+}
+.cx{
+    margin-left: 9%;
+}

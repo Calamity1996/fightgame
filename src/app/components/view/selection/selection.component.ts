@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Charter } from 'src/app/classes/Character';
 import { SelectionpgService } from 'src/app/service/selectionpg.service';
 
@@ -110,6 +110,7 @@ export class SelectionComponent implements OnInit {
       urlimg : "/assets/img/charter/charter9.png"
     }
   ];
+  
   constructor(
     public selectionpgService : SelectionpgService
   ) { }

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Charter } from '../classes/Character';
+import { SelectionComponent } from 'src/app/components/view/selection/selection.component';
 
 
 @Injectable({
@@ -8,6 +9,7 @@ import { Charter } from '../classes/Character';
 export class SelectionpgService {
 
   public characters : Charter[] = [];
+  public prova : Charter[] = [];
   constructor() { 
     
   }
@@ -27,19 +29,18 @@ export class SelectionpgService {
   insertInFight = (character)  => {
       if(!this.isPgAlreadyTaken(character) && this.characters.length < 2){
           console.log(character);
-          this.characters.push(character);
-         // document.write("")
+          this.characters.push(character);    
       }
-      /*
-      if(this.characters.length == 2)
-        alert("Hai già selezionato 2 personaggi");
-      */
-    
-      console.log(this.getTotalChar());
   }
 
   fightStart = () : boolean => {
     //console.log(this.getTotalChar() == 2);
     return this.getTotalChar() == 2 ? true : false;
+  }
+
+  generateRandomVersus = () => {
+    let rand = Math.round(10 * Math.random());
+    console.log("_______"+rand+"____"+this.characters.length+"____"+this.characters[rand]);
+    this.insertInFight (this.characters[rand]);
   }
 }

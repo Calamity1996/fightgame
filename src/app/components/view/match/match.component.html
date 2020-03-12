@@ -6,7 +6,8 @@
         </div>
         <!-- cliccando su random devo invocare il metodo random e mandarlo diretto nella schermata di lotta effettiva -->
         <div class="col">
-            <img src="/assets/img/random_char_select.png" routerLink="/fight" class="clickable rchars">
+            <img src="/assets/img/random_char_select.png" class="clickable rchars"
+            (click)="selectionpgService.generateRandomVersus()">
         </div>
     </div>
 </div>

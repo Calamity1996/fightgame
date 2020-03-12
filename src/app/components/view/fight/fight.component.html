@@ -19,10 +19,10 @@
 <div class="row" >
     <div class="col 4" *ngFor="let c of selectionpgService.characters; let i=index ;">          
         <p class="pg"> >> PLAYER {{i+1}}     </p> 
-        <img src="{{c.urlimg}}" class="dimimg">
-        <p>{{c.name}} </p>
-        <p>>> LIFEPOINTS LEFT : {{c.lifePoints}} </p>
-        <p>>> SKILL ? {{c.skill}}</p>
+        <img src="{{c.urlimg}}" class="dimimg bgimg">
+        <p class="max">{{c.name}} </p>
+        <p class="max">>> LIFEPOINTS LEFT : {{c.lifePoints}} </p>
+        <p class="max">>> SKILL ? {{c.skill}}</p>
     </div>
     <!--<input class="form-control textarea" type="text" id="textArea" readonly>-->
     

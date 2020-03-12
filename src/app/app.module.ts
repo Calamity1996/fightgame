@@ -29,14 +29,14 @@ import { SelectionpgService } from 'init/src/app/service/selectionpg.service';
     BrowserModule,
     AppRoutingModule
   ],
-  /*
+  
   providers: [
     SelectionpgService,
     CharactersService,
     FightService,
   ],
-  */
-  providers: [],
+  
+  //providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -5,6 +5,7 @@
 p{
     font: 10pt bold;
     color: red;
+    background-color: rgb(0, 0, 0);
   }
 li{
     padding-right: 10px;
@@ -43,4 +44,11 @@ li{
 
   .col-4 {
     width: 33.33%;
+  }
+  .bgimg{
+    background-color: rgba(0, 0, 0, 0.739);
+  }
+
+  .max{
+    font-size: 25pt;
   }
