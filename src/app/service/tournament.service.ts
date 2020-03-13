@@ -32,14 +32,16 @@ switchViewTournament = () : boolean => {
 }
 
 isPgAlreadyTaken = (character) : boolean => {
+  console.log(character);
   return this.characters.find (c => c.charId === character.charId) != null;
 }
 
 
 insertInTournament = (character)  => {
-  if(!this.isPgAlreadyTaken(character) && this.characters.length < 2){
-      console.log(character);
-      this.mycharacters.push(character);    
+  if(!this.isPgAlreadyTaken(character) && this.characters.length < this.npg){
+      this.mycharacters.push(character); 
+      console.log(character );
+      console.log("aggiunto :"+this.mycharacters.length);
   }
 }
 
