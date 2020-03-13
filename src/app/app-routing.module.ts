@@ -6,6 +6,7 @@ import { CharterComponent } from './components/common/charter/charter.component'
 import { MatchComponent } from './components/view/match/match.component';
 import { SelectionComponent } from './components/view/selection/selection.component';
 import { TournamentcompComponent } from './components/view/tournamentcomp/tournamentcomp.component';
+import { TSelectionComponent } from './components/view/t-selection/t-selection.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path : 'match', component : MatchComponent},
   { path : 'selection', component : SelectionComponent},
   { path : 'tournament', component : TournamentcompComponent },
+  { path : 't-selection', component : TSelectionComponent },
   { path : '', redirectTo : 'index', pathMatch: 'full' }
 ];
 

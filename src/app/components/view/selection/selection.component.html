@@ -1,32 +1,36 @@
-<div class="row" >    
-    <div class="col-8">   
-        <div class="row" > 
-            <div class="col-3" *ngFor="let charter of chart">
-                <img src="{{charter.urlimg}}" class="clickable card dimcard" (click)="selectionpgService.insertInFight(charter)" >
-                <div class="card-body">
-                    <p> >> NAME : {{charter.name}} </p>
-                    <p> >> LIFEPOINTS : {{charter.lifePoints}}</p>
-                    <p> >> STR : {{charter.str}}</p>
-                    <p> >> DEF : {{charter.def}}</p>
-                    <p> >> DEX : {{charter.dex}}</p>
-                    <p> >> INT : {{charter.int}}</p>
-                </div>
-                <div *ngIf="selectionpgService.fightStart()">
-                    <div routerLink="/fight"></div>
+<div class="bg">
+ <div class="row" >    
+        <div class="col-8">   
+            <div class="row" > 
+                <div class="col-3" *ngFor="let charter of chart">
+                    <img src="{{charter.urlimg}}" class="clickable card dimcard" (click)="selectionpgService.insertInFight(charter)" >
+                    <div class="card-body">
+                        <p> >> NAME : {{charter.name}} </p>
+                        <p> >> LIFEPOINTS : {{charter.lifePoints}}</p>
+                        <p> >> STR : {{charter.str}}</p>
+                        <p> >> DEF : {{charter.def}}</p>
+                        <p> >> DEX : {{charter.dex}}</p>
+                        <p> >> INT : {{charter.int}}</p>
+                    </div>
+                    
+                    <div *ngIf="selectionpgService.fightStart()">
+                        <div routerLink="/fight"></div>
+                    </div>
+                </div> 
+            </div>
+        </div>  
+        <div class="col-4">
+            <div class="row"  *ngFor="let c of selectionpgService.characters; let i=index ;">
+                <div class="col">          
+                    <p class="pg"> >> PERSONAGGIO {{i+1}}     </p> 
+                    <img src="{{c.urlimg}}" class="dimimg">
                 </div>
             </div> 
-        </div>
-    </div>  
-    <div class="col-4">
-        <div class="row"  *ngFor="let c of selectionpgService.characters; let i=index ;">
-            <div class="col">          
-                <p class="pg"> >> PERSONAGGIO {{i+1}}     </p> 
-                <img src="{{c.urlimg}}" class="dimimg">
-            </div>
-        </div> 
-        <input type="submit" routerLink="/fight" value="Combatti" class="btn btn-primary" >       
-    </div>  
-</div>
-<div class="row">
-    <div class="col"><input type="submit" routerLink="/fight" value="Combatti" class="btn btn-primary" ></div>
-</div>
+            <input type="submit" routerLink="/fight" value="Combatti" class="btn btn-primary" >       
+        </div>  
+    </div>
+
+    <div class="row">
+        <div class="col"><input type="submit" routerLink="/fight" value="Combatti" class="btn btn-primary" ></div>
+    </div>
+</div> 

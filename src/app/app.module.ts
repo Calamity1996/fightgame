@@ -10,9 +10,11 @@ import { FightComponent } from './components/view/fight/fight.component';
 import { MatchComponent } from './components/view/match/match.component';
 import { SelectionComponent } from './components/view/selection/selection.component';
 import { TournamentcompComponent } from './components/view/tournamentcomp/tournamentcomp.component';
-import { CharactersService } from 'init/src/app/service/characters.service';
-import { FightService } from 'init/src/app/service/fight.service';
-import { SelectionpgService } from 'init/src/app/service/selectionpg.service';
+import { CharactersService } from 'src/app/service/characters.service';
+import { FightService } from 'src/app/service/fight.service';
+import { SelectionpgService } from 'src/app/service/selectionpg.service';
+import { TournamentService } from 'src/app/service/tournament.service';
+import { TSelectionComponent } from './components/view/t-selection/t-selection.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { SelectionpgService } from 'init/src/app/service/selectionpg.service';
     FightComponent,
     MatchComponent,
     SelectionComponent,
-    TournamentcompComponent
+    TournamentcompComponent,
+    TSelectionComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +37,7 @@ import { SelectionpgService } from 'init/src/app/service/selectionpg.service';
     SelectionpgService,
     CharactersService,
     FightService,
+    TournamentService,
   ],
   
   //providers: [],

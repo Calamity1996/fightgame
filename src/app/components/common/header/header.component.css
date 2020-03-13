@@ -4,3 +4,7 @@
     color: crimson;
     padding-bottom: 70pt;
 }
+.container{
+    background : linear-gradient(#191919, hsl(225, 2%, 56%));
+    max-width: 1300px;
+}

@@ -9,6 +9,7 @@ import { SelectionpgService } from 'src/app/service/selectionpg.service';
 })
 export class SelectionComponent implements OnInit {
 
+  
   public chart : Charter[] = [
     { // TOT 255
       name : "Ninja",
@@ -113,6 +114,7 @@ export class SelectionComponent implements OnInit {
   
   constructor(
     public selectionpgService : SelectionpgService
+     
   ) { }
 
   ngOnInit(): void {
@@ -126,6 +128,7 @@ export class SelectionComponent implements OnInit {
     return this.chart.length;
   }
 
+  
 
 
 }

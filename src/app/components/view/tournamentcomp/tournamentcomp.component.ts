@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Charter } from 'src/app/classes/Character';
+import { SelectionpgService } from 'src/app/service/selectionpg.service';
+import { TournamentService } from 'src/app/service/tournament.service';
 
 @Component({
   selector: 'app-tournamentcomp',
@@ -7,7 +10,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TournamentcompComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public selectionpgService : SelectionpgService,
+    public tournamentService : TournamentService
+  ) { }
 
   ngOnInit(): void {
   }

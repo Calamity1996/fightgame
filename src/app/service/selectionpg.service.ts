@@ -1,17 +1,20 @@
 import { Injectable } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Charter } from '../classes/Character';
 import { SelectionComponent } from 'src/app/components/view/selection/selection.component';
 
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SelectionpgService {
 
   public characters : Charter[] = [];
-  public prova : Charter[] = [];
-  constructor() { 
+  
+  constructor(
     
+  ) { 
+      
   }
   getChart = () : any[] => {
     return this.characters;
@@ -43,4 +46,6 @@ export class SelectionpgService {
     console.log("_______"+rand+"____"+this.characters.length+"____"+this.characters[rand]);
     this.insertInFight (this.characters[rand]);
   }
+  
+  
 }
