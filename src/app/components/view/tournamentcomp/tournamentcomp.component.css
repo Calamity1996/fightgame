@@ -17,10 +17,25 @@
     border: 1px solid red;
     background-color: tomato;
 }
-.container{
+.container1{
     margin-left: 37%;
     justify-content: center;
 }
+
+.container2 {
+    display: grid;
+    background-image: url("src\assets\img\environment\bgfight.jpg");
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0px;
+    grid-auto-rows: minmax(60px, auto);
+    border-top: solid;
+    border-left: solid;
+    border-bottom: solid;
+    border-right: solid;
+    border-radius: 5px;
+    max-width: 60%;
+    max-height: 100%;
+  }
 .row{
     margin-bottom: 2%;
     
@@ -32,3 +47,13 @@
 .cx{
     margin-left: 9%;
 }
+
+.dimimg{
+    width: 150px;
+    height: 200px;
+  }
+
+  .pg{
+    background-color: black;
+    color : red;
+  }

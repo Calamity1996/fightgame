@@ -3,6 +3,7 @@ import { Charter } from 'src/app/classes/Character';
 import { CharactersService } from 'src/app/service/characters.service';
 import { SelectionpgService } from 'src/app/service/selectionpg.service';
 import { TournamentService } from 'src/app/service/tournament.service';
+import { FightService } from 'src/app/service/fight.service';
 
 
 @Component({
@@ -17,7 +18,8 @@ export class TSelectionComponent implements OnInit {
   constructor(
     public charactersService : CharactersService ,
     public selectionpgService : SelectionpgService,
-    public tournamentService : TournamentService
+    public tournamentService : TournamentService,
+    public fightService : FightService
   ) { 
     this.characters = charactersService.characters;
    }

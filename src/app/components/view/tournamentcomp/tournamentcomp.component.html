@@ -1,26 +1,48 @@
- <div class="container"> 
-   <div class="row">
-        <div class="col-12">
-        <div class="f"> Quanti giocatori totali? </div>
+ <div class="container1"> 
+     <div *ngIf = "!fightService.show()">
+    <div class="row">
+            <div class="col-12">
+            <div class="f"> Quanti giocatori totali? </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1">
+                <input type="radio" id="male" name="gender" value="male" (click)="tournamentService.getNumFighters(4)">
+                <label for="male"><h2>4</h2></label><br>
+            </div>
+            <div class="col-1">
+                <input type="radio" id="female" name="gender" value="female" (click)="tournamentService.getNumFighters(8)">
+                <label for="female"><h2>8</h2></label><br>
+            </div>
+            <div class="col-1">
+                <input type="radio" disabled id="other" name="gender" value="other">
+                <label for="other"><h2>16 </h2></label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                    <input type="submit" class="input" value="Procedi" routerLink="/t-selection" class="btn btn-primary cx">
+            </div>
+            </div>
+    </div>
+ </div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------->
+<div class="container"> 
+    <div *ngIf = "fightService.show()">
+        <!-- *ngFor = "let i = index of log(2,{{tournamentService.npg}}" -->
+        <div class="row" >
+            <div class="col-3" *ngFor="let c of tournamentService.mycharacters; let i = index;">
+                <p class="pg">>> PLAYER {{i+1}}</p>
+                <!-- ngif per vedere se stampare la foto-->
+                <img src="{{c.urlimg}}" class="dimimg">
+                <!-- <div [innerHTML]="htmlWinner"></div> -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                    <input type="submit" class="input" value="FIGHT" class="btn btn-primary cx"
+                    (click)="tournamentService.startTournamentFights()">
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-1">
-            <input type="radio" id="male" name="gender" value="male" (click)="tournamentService.getNumFighters(4)">
-            <label for="male"><h2>4</h2></label><br>
-        </div>
-        <div class="col-1">
-            <input type="radio" id="female" name="gender" value="female" (click)="tournamentService.getNumFighters(8)">
-            <label for="female"><h2>8</h2></label><br>
-        </div>
-        <div class="col-1">
-            <input type="radio" disabled id="other" name="gender" value="other">
-            <label for="other"><h2>16 </h2></label>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12">
-                <input type="submit" class="input" value="Procedi" routerLink="/t-selection" class="btn btn-primary cx">
-        </div>
-        </div>
-    </div> 
+</div> 

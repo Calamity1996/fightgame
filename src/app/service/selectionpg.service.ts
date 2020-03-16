@@ -46,6 +46,4 @@ export class SelectionpgService {
     console.log("_______"+rand+"____"+this.characters.length+"____"+this.characters[rand]);
     this.insertInFight (this.characters[rand]);
   }
-  
-  
 }

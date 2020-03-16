@@ -14,7 +14,7 @@
                            <p> >> INT : {{charter.int}}</p>
                        </div>
                        
-                       <div *ngIf="selectionpgService.fightStart()">
+                       <div *ngIf="tournamentService.fightStart()">
                            <div routerLink="/fight"></div>
                        </div>
                    </div> 
@@ -23,7 +23,7 @@
 
            <div class="col-4">
                <div class="row" >
-                   <div class="col-2" *ngFor="let c of tournamentService.mycharacters; let i=index ;">
+                   <div class="col" *ngFor="let c of tournamentService.mycharacters; let i=index ;">
                         <p class="pg"> >> PERSONAGGIO {{i+1}}     </p> 
                         <img src="{{c.urlimg}}" class="dimimg">
                    </div>
@@ -33,6 +33,7 @@
        </div>
    
        <div class="row">
-           <div class="col"><input type="submit" routerLink="/fight" value="Combatti" class="btn btn-primary" ></div>
+           <div class="col"><input type="submit" routerLink="/tournament" value="Combatti" class="btn btn-primary"
+            (click) = "fightService.change()" ></div>
        </div>
    </div> 
