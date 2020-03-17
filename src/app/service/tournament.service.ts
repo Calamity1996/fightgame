@@ -174,6 +174,7 @@ startTournamentFights = () => {
           // Se uno è già stato selezionato && quello selezionato è ancora vivo && il secondo 
           // selezionato (supp) è ancora vivo
           if(!first && this.isAliveYet[i] && this.isAliveYet[supp]){
+            this.setFights(this.mycharacters[i],this.mycharacters[supp]);
             //console.log("preso il secondo");
             first = true;
             console.log("------------> 1 : "+ this.mycharacters[i].name + " >> i : "+i);

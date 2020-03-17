@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { Component, OnInit, Input } from '@angular/core';
 import { Charter } from '../classes/Character';
 import { SelectionComponent } from 'src/app/components/view/selection/selection.component';
+import { CharterComponent } from 'src/app/components/common/charter/charter.component';
+import { Fight } from '../classes/Fight';
 
 
 @Injectable({
@@ -10,6 +12,8 @@ import { SelectionComponent } from 'src/app/components/view/selection/selection.
 export class SelectionpgService {
 
   public characters : Charter[] = [];
+  public fight : Fight = new Fight();
+  public first : boolean = true;
   
   constructor(
     
@@ -35,6 +39,14 @@ export class SelectionpgService {
           this.characters.push(character);    
       }
   }
+
+  insertInFight2 = (character)  => {
+    if(!this.isPgAlreadyTaken(character) && this.first){
+        this.fight.pg1 = character;    
+    }
+    else 
+      this.fight.pg2 = character;
+}
 
   fightStart = () : boolean => {
     //console.log(this.getTotalChar() == 2);
