@@ -49,7 +49,7 @@ switchViewTournament = () : boolean => {
 
 
 isPgAlreadyTaken = (character) : boolean => {
-  console.log(character);
+  //console.log(character);
   return this.characters.find (c => c.charId === character.charId) != null;
 }
 // Mi dice quanti pag sono rimanenti
@@ -131,8 +131,7 @@ fightStart = () : boolean => {
 
 setFights = ( p1 : Charter , p2 : Charter) => {
   let fight : Fight = new Fight;
-  fight.pg1 = p1;
-  fight.pg2 = p2;
+  
   fight.winner = -1;
   this.sfight = fight;
   this.fights.push(fight);

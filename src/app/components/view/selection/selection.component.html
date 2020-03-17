@@ -3,6 +3,8 @@
         <div class="col-8">   
             <div class="row" > 
                 <div class="col-3" *ngFor="let charter of chart">
+
+                    <!--
                     <img src="{{charter.urlimg}}" class="clickable card dimcard" (click)="selectionpgService.insertInFight(charter)" >
                     <div class="card-body">
                         <p> >> NAME : {{charter.name}} </p>
@@ -12,7 +14,8 @@
                         <p> >> DEX : {{charter.dex}}</p>
                         <p> >> INT : {{charter.int}}</p>
                     </div>
-                    
+                    -->
+                    <app-charter [inputChar]="charter"></app-charter>  
                     <div *ngIf="selectionpgService.fightStart()">
                         <div routerLink="/fight"></div>
                     </div>

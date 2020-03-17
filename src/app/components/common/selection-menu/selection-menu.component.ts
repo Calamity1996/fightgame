@@ -1,16 +1,16 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Charter } from 'src/app/classes/Character';
 import { SelectionpgService } from 'src/app/service/selectionpg.service';
 import { SelectService } from 'src/app/service/select.service';
 
 @Component({
-  selector: 'app-selection',
-  templateUrl: './selection.component.html',
-  styleUrls: ['./selection.component.css']
+  selector: 'app-selection-menu',
+  templateUrl: './selection-menu.component.html',
+  styleUrls: ['./selection-menu.component.css']
 })
-export class SelectionComponent implements OnInit {
+export class SelectionMenuComponent implements OnInit {
 
-  
+   
   public chart : Charter[] = [
     { // TOT 255
       name : "Ninja",
@@ -112,25 +112,12 @@ export class SelectionComponent implements OnInit {
       urlimg : "/assets/img/charter/charter9.png"
     }
   ];
-  
   constructor(
     public selectionpgService : SelectionpgService,
     public selectService : SelectService
-     
   ) { }
 
   ngOnInit(): void {
   }
-
-  getTotalChar = () => {
-    return this.chart;
-  }
-
-  getNumberOfCharacters = () : number => {
-    return this.chart.length;
-  }
-
-  
-
 
 }

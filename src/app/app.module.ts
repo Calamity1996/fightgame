@@ -15,6 +15,8 @@ import { FightService } from 'src/app/service/fight.service';
 import { SelectionpgService } from 'src/app/service/selectionpg.service';
 import { TournamentService } from 'src/app/service/tournament.service';
 import { TSelectionComponent } from './components/view/t-selection/t-selection.component';
+import { FightingComponent } from './components/common/fighting/fighting.component';
+import { SelectionMenuComponent } from './components/common/selection-menu/selection-menu.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { TSelectionComponent } from './components/view/t-selection/t-selection.c
     MatchComponent,
     SelectionComponent,
     TournamentcompComponent,
-    TSelectionComponent
+    TSelectionComponent,
+    FightingComponent,
+    SelectionMenuComponent
   ],
   imports: [
     BrowserModule,

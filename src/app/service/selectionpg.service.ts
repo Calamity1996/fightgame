@@ -42,10 +42,10 @@ export class SelectionpgService {
 
   insertInFight2 = (character)  => {
     if(!this.isPgAlreadyTaken(character) && this.first){
-        this.fight.pg1 = character;    
+        this.fight.pg[0] = character;    
     }
     else 
-      this.fight.pg2 = character;
+      this.fight.pg[1] = character;
 }
 
   fightStart = () : boolean => {

@@ -3,6 +3,7 @@
            <div class="col-8">   
                <div class="row" > 
                    <div class="col-3" *ngFor="let charter of characters">
+                       <!--
                        <img src="{{charter.urlimg}}" class="clickable card dimcard" 
                        (click)="tournamentService.insertInTournament(charter)" >
                        <div class="card-body">
@@ -13,7 +14,8 @@
                            <p> >> DEX : {{charter.dex}}</p>
                            <p> >> INT : {{charter.int}}</p>
                        </div>
-                       
+                       -->
+                       <app-charter [inputChar]="charter"></app-charter> 
                        <div *ngIf="tournamentService.fightStart()">
                            <div routerLink="/fight"></div>
                        </div>

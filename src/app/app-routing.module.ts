@@ -7,6 +7,7 @@ import { MatchComponent } from './components/view/match/match.component';
 import { SelectionComponent } from './components/view/selection/selection.component';
 import { TournamentcompComponent } from './components/view/tournamentcomp/tournamentcomp.component';
 import { TSelectionComponent } from './components/view/t-selection/t-selection.component';
+import { SelectionMenuComponent } from './components/common/selection-menu/selection-menu.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path : 'selection', component : SelectionComponent},
   { path : 'tournament', component : TournamentcompComponent },
   { path : 't-selection', component : TSelectionComponent },
+  { path : 'selection-menu', component : SelectionMenuComponent },
   { path : '', redirectTo : 'index', pathMatch: 'full' }
 ];
 

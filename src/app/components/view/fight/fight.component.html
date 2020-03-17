@@ -1,7 +1,14 @@
 
+  <div class="row"  *ngFor="let f of selectService.fights; let i=index ;">
+        <div class="col-4" *ngFor = "let c of f.pg; let j=index">
+          <!-- per adesso stampo l'img e lo status, dopo aggiusto con fighting-->
+          <app-charter [inputChar]="c"></app-charter>
+        </div> 
+  </div>
+
         
       
-
+<!--
 <div *ngIf = "!fightService.show()">
   <div class="row" >
       <div class="col 4" *ngFor="let c of selectionpgService.characters; let i=index ;">          
@@ -21,6 +28,8 @@
       </div>
   </div>
 </div>
+-->
+<!--
 <div *ngIf = "fightService.show()">
   <div class="row" >
       <div class="col 4" *ngFor="let c of fightService.characters; let i=index ;">   
@@ -39,3 +48,28 @@
      
   </div>
 </div>
+-->
+<!--
+<div *ngIf = "fightService.show()">
+  <div class="row" >
+    <div class="col-4">
+      <p class="pg"> >> PLAYER 1 </p>
+      <img src= "{{inputFight.pg1.urlimg}}" class="dimimg bgimg">
+      <p class="max">{{inputFight.pg1.name}} </p>
+      <p class="max">>> LIFEPOINTS LEFT : {{inputFight.pg1.lifePoints}} </p>
+      <p class="max">>> SKILL ? {{inputFight.pg1.skill}}</p>
+    </div>
+    <div class="col-4">
+      <p class="pg"> >> PLAYER 2 </p>
+      <img src= "{{inputFight.pg2.urlimg}}" class="dimimg bgimg">
+      <p class="max">{{inputFight.pg2.name}} </p>
+      <p class="max">>> LIFEPOINTS LEFT : {{inputFight.pg2.lifePoints}} </p>
+      <p class="max">>> SKILL ? {{inputFight.pg2.skill}}</p>
+    </div>
+    <input type="submit" value="FIGHT" class="btn btn-primary fightbtn"
+    (click)="tournamentService.startTournamentFights()"
+    >
+  </div>
+</div>
+-->
+

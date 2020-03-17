@@ -1,1 +1,11 @@
-<p>charter works!</p>
+<img src="{{inputChar.urlimg}}" class="clickable card dimcard" 
+(click)="selectService.insertInFight(inputChar)"
+(click)="tournamentService.insertInTournament(inputChar)" >
+<div class="card-body">
+     <p> >> NAME : {{inputChar.name}} </p>
+     <p> >> LIFEPOINTS : {{inputChar.lifePoints}}</p>
+     <p> >> STR : {{inputChar.str}}</p>
+     <p> >> DEF : {{inputChar.def}}</p>
+     <p> >> DEX : {{inputChar.dex}}</p>
+     <p> >> INT : {{inputChar.int}}</p>
+</div>
