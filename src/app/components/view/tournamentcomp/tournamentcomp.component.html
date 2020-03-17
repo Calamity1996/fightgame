@@ -27,15 +27,44 @@
     </div>
  </div>
 <!------------------------------------------------------------------------------------------------------------------------------------------------->
+
 <div class="container"> 
     <div *ngIf = "fightService.show()">
-        <!-- *ngFor = "let i = index of log(2,{{tournamentService.npg}}" -->
+        
         <div class="row" >
             <div class="col-3" *ngFor="let c of tournamentService.mycharacters; let i = index;">
-                <p class="pg">>> PLAYER {{i+1}}</p>
-                <!-- ngif per vedere se stampare la foto-->
-                <img src="{{c.urlimg}}" class="dimimg">
-                <!-- <div [innerHTML]="htmlWinner"></div> -->
+                <div *ngIf=" tournamentService.isAliveYet[i]">
+                    <p class="pg">>> PLAYER {{i+1}}</p>
+                    <img src="{{c.urlimg}}" class="dimimg">
+            </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                    <input type="submit" class="input" value="FIGHT" class="btn btn-primary cx"
+                    (click)="tournamentService.startTournamentFights()"
+                    >
+            </div>
+        </div>
+
+        <div class="col">
+        
+            <p>{{fightService.log}}</p>
+          
+          </div>
+    </div>
+</div> 
+
+<!--
+<div class="container"> 
+    <div *ngIf = "fightService.show()">
+       
+        <div class="row"  *ngFor="let go of tournamentService.cycle">
+            <div class="col-3" *ngFor="let c of tournamentService.mycharacters; let i = index;">
+                <div *ngIf=" tournamentService.isAliveYet[i]">
+                    <p class="pg">>> PLAYER {{i+1}}</p>
+                    <img src="{{c.urlimg}}" class="dimimg">
+                </div>
             </div>
         </div>
         <div class="row">
@@ -46,3 +75,4 @@
         </div>
     </div>
 </div> 
+-->

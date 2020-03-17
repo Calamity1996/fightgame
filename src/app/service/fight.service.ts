@@ -7,6 +7,7 @@ import {Router} from '@angular/router';
 })
 export class FightService {
 
+  public log : string = '';
   public showTour : boolean = false;
   public pg1Turn : boolean = true;
   public characters : Charter[] = [];
@@ -31,19 +32,26 @@ play = ( player1 : Charter , player2 : Charter ) : boolean => {
     this.pg1Turn = false;
       if(this.hit()){
         this.characters[1].lifePoints -= this.characters[0].dex + this.characters[0].str + this.characters[0].int - this.characters[0].def;
-        console.log("name : "+this.characters[1].name+ " >> lifePoints : "+ this.characters[1].lifePoints);
+        this.log += "name : "+this.characters[1].name+ " >> lifePoints : "+ this.characters[1].lifePoints+"\n";
+        //console.log("name : "+this.characters[1].name+ " >> lifePoints : "+ this.characters[1].lifePoints);
+        console.log(this.log);
         //this.writeStatus ("PLAYER2 LIFEPOINTS >> " + this.characters[1].lifePoints);
       }
-      else console.log("PLAYER "+player1.name+" MISS!");
+      else 
+        this.log += "PLAYER "+player1.name+" MISS!"+"\n";
+        //console.log("PLAYER "+player1.name+" MISS!");
     }
   else {
     this.pg1Turn = true;
     if(this.hit()){
       this.characters[0].lifePoints -= this.characters[1].dex + this.characters[1].str + this.characters[1].int - this.characters[1].def;
-      console.log("name : "+this.characters[0].name+ " >> lifePoints : "+ this.characters[0].lifePoints);
-      status += "HIT: " + this.characters[1].lifePoints + "\n";
+      //console.log("name : "+this.characters[0].name+ " >> lifePoints : "+ this.characters[0].lifePoints);
+      this.log += "name : "+this.characters[0].name+ " >> lifePoints : "+ this.characters[0].lifePoints+"\n";
+      //status += "HIT: " + this.characters[1].lifePoints + "\n";
     }
-    else console.log("PLAYER "+player2.name+" MISS!");
+    else 
+      //console.log("PLAYER "+player2.name+" MISS!");
+      this.log += "PLAYER "+player2.name+" MISS!"+"\n";
   }
   if(this.characters[0].lifePoints <= 0){
     alert("PLAYER "+player2.name+" WIN!");

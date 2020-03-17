@@ -5,6 +5,12 @@
     padding-top: 8%;
 }
 
+p{
+    word-wrap: break-word;
+    white-space:pre-wrap;
+    
+}
+
 .col {
     display: flex;
     justify-content: center;

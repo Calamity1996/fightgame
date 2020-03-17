@@ -29,4 +29,10 @@ export class FightComponent implements OnInit {
   getTotalChar = () : number => {
     return this.characters.length;
   }
+
+  print = () : boolean => {
+    if(this.getTotalChar() >= 2)
+      return false;
+    return true;
+  }
 }

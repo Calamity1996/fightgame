@@ -3,6 +3,8 @@
     height: auto;
 }
 p{
+    word-wrap: break-word;
+    white-space:pre-wrap;
     font: 10pt bold;
     color: red;
     background-color: rgb(0, 0, 0);

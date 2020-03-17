@@ -5,12 +5,17 @@ import { SelectionpgService } from 'src/app/service/selectionpg.service';
 import { TSelectionComponent } from 'src/app/components/view/t-selection/t-selection.component';
 import { FightService } from 'src/app/service/fight.service';
 import { ConstantPool } from '@angular/compiler';
+import {Router} from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TournamentService {
 
+  //lo uso per mettere 2 pg alla volta e passarli al fight
+  public fights : Fight [] = [];
+  public sfight : Fight = null;
+  public cycle : number [] = [];
   public initLife : number [] = [];
   public count : number ;
   public npg : number ;
@@ -25,6 +30,7 @@ export class TournamentService {
 
   constructor(
     public selectionpgService : SelectionpgService,
+    private router: Router,
     public fightService : FightService
   ) {
    }
@@ -40,6 +46,7 @@ getTotalChar = () : number =>{
 switchViewTournament = () : boolean => {
   return true;
 }
+
 
 isPgAlreadyTaken = (character) : boolean => {
   console.log(character);
@@ -80,9 +87,24 @@ getNumFighters = ( numpg : number ) => {
 }
 
 setDimTournament = ( numpg : number ) => {
-  if( this.npg == 4)  this.small = true;
-  if( this.npg == 8)  this.medium = true;
-  if( this.npg == 16)  this.large = true;
+  if( this.npg == 4) {
+     this.small = true;
+     this.cycle.push(1);
+     this.cycle.push(2);
+  }
+  if( this.npg == 8){
+     this.medium = true;
+     this.cycle.push(1);
+     this.cycle.push(2);
+     this.cycle.push(3);
+  }
+  if( this.npg == 16){
+     this.large = true;
+     this.cycle.push(1);
+     this.cycle.push(1);
+     this.cycle.push(1);
+     this.cycle.push(1);
+  }
   this.createTournament (this.npg);
 }
 
@@ -107,13 +129,33 @@ fightStart = () : boolean => {
   return this.getTotalChar() == this.npg ? true : false;
 }
 
-isDead = () => {
-
+setFights = ( p1 : Charter , p2 : Charter) => {
+  let fight : Fight = new Fight;
+  fight.pg1 = p1;
+  fight.pg2 = p2;
+  fight.winner = -1;
+  this.sfight = fight;
+  this.fights.push(fight);
+  this.selectionpgService.insertInFight(p1);
+  this.selectionpgService.insertInFight(p2);
 }
 
 chargeLife = (index : number) => {
   this.mycharacters[index].lifePoints = this.initLife[index];
 }
+
+startTournamentFightsNewVersion = () => {
+  let i;
+  // Inizio settando le fights
+  for(i = 0; i < this.npg; i+2){
+    this.setFights(this.mycharacters[i],this.mycharacters[i+1]);
+    //this.router.navigateByUrl('/fight');
+    //this.router.navigate(['/fight']);
+  }
+  // Ho le fights per ora 2 perchè è il torneo da 4 player
+  // Passo alla pagina di /fight e gestisco da li?
+}
+
 
 startTournamentFights = () => {
   // In myc ho tutti i concorrenti, li divido in fight
@@ -122,30 +164,13 @@ startTournamentFights = () => {
   let winner;
   //if(this.isMedium()){
     if(this.isSmall()){
-    let first
-    /*
-    for (i = 0; i < 8; i+=2){
-      console.log("1 : "+ this.mycharacters[i] + "2 : "+this.mycharacters[i+1]);
-      winner = this.fightService.play(this.mycharacters[i],this.mycharacters[i+1]);
-      if ( winner ){ // Se è true vuol dire che ha vinto l'1 quindi abbasso il flag di i+1
-        this.isAliveYet[i+1] = false;
-      }
-      else  
-        this.isAliveYet[i] = false;
-     }
-     il 16 player non è ancora implementato
-     */
+    let first;
+    
      for(j = 0; j < 2; j++){
       let supp = 0;
-        // Ciclo sui personaggi che hanno vinto e gli rigenero la vita
-        /*
-        for (i = 0; i < 4; i++ ){
-          if(this.isAliveYet[i])
-            this.mycharacters[i].lifePoints = this.initLife[i];
-        }*/
+  
         for (i = 0,first = true; i < 4; i++ ){
           console.log(i+" : "+ this.mycharacters[i].name + " life : "+ this.mycharacters[i].lifePoints );
-          
           // Se uno è già stato selezionato && quello selezionato è ancora vivo && il secondo 
           // selezionato (supp) è ancora vivo
           if(!first && this.isAliveYet[i] && this.isAliveYet[supp]){

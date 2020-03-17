@@ -1,35 +1,41 @@
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom">
-    <a class="navbar-brand logo" href="#">Logo</a>
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <input type="submit" value="STATUS PG1" class="btn btn-primary">
-          </li>
-      <li class="nav-item">
-        <input type="submit" value="FIGHT" class="btn btn-primary fightbtn"
-        (click)="fightService.play( selectionpgService.characters[0], selectionpgService.characters[1])"
+
         
+      
+
+<div *ngIf = "!fightService.show()">
+  <div class="row" >
+      <div class="col 4" *ngFor="let c of selectionpgService.characters; let i=index ;">          
+          <p class="pg"> >> PLAYER {{i+1}}     </p> 
+          <img src="{{c.urlimg}}" class="dimimg bgimg">
+          <p class="max">{{c.name}} </p>
+          <p class="max">>> LIFEPOINTS LEFT : {{c.lifePoints}} </p>
+          <p class="max">>> SKILL ? {{c.skill}}</p>
+      </div>
+      <input type="submit" value="FIGHT" class="btn btn-primary fightbtn"
+        (click)="fightService.play( selectionpgService.characters[0], selectionpgService.characters[1])"
         >
-      </li>
-      <li class="nav-item">
-        <input type="submit" value="STATUS PG2" class="btn btn-primary">
-      </li>
-    </ul>
-  </nav>
-
-
-<div class="row" >
-    <div class="col 4" *ngFor="let c of selectionpgService.characters; let i=index ;">          
-        <p class="pg"> >> PLAYER {{i+1}}     </p> 
-        <img src="{{c.urlimg}}" class="dimimg bgimg">
-        <p class="max">{{c.name}} </p>
-        <p class="max">>> LIFEPOINTS LEFT : {{c.lifePoints}} </p>
-        <p class="max">>> SKILL ? {{c.skill}}</p>
-    </div>
-    <!--<input class="form-control textarea" type="text" id="textArea" readonly>-->
-    
-    
-    <!-- (click)="fightService.writeStatus()"> -->
+      <div class="col">
+        
+        <p>{{fightService.log}}</p>
+      
+      </div>
+  </div>
 </div>
-<div class="row stat">
-
+<div *ngIf = "fightService.show()">
+  <div class="row" >
+      <div class="col 4" *ngFor="let c of fightService.characters; let i=index ;">   
+        <div *ngIf="print()">     
+          <p class="pg"> >> PLAYER {{i+1}}     </p> 
+          <img src="{{c.urlimg}}" class="dimimg bgimg">
+          <p class="max">{{c.name}} </p>
+          <p class="max">>> LIFEPOINTS LEFT : {{c.lifePoints}} </p>
+          <p class="max">>> SKILL ? {{c.skill}}</p>
+          <p>{{fightService.log}}<br></p>
+        </div>  
+        <input type="submit" value="FIGHT" class="btn btn-primary fightbtn"
+        (click)="fightService.play( tournamentService.characters[0], selectionpgService.characters[1])"
+        >
+      </div>
+     
+  </div>
 </div>

@@ -13,6 +13,7 @@ import { FightService } from 'src/app/service/fight.service';
 })
 export class TSelectionComponent implements OnInit {
 
+  public countPrint : number = 0;
   public characters : Charter[] = [];
   
   constructor(
@@ -25,10 +26,13 @@ export class TSelectionComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    this.countPrint = this.getC().length;
   }
 
   getC = () => {
     return this.characters;
   }
+
+  
   
 }
