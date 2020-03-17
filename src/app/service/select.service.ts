@@ -28,6 +28,7 @@ export class SelectService {
     let f : Fight = new Fight();
     if( !this.isPgAlreadyTaken(character) && !this.full){
       console.log("not full "+character.urlimg);
+      this.full=true;
       f.pg.push(character);
       console.log(f.pg[0]);
     }
