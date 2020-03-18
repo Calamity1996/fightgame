@@ -3,7 +3,14 @@
         <div class="col-4" *ngFor = "let c of f.pg; let j=index">
           <!-- per adesso stampo l'img e lo status, dopo aggiusto con fighting-->
           <app-charter [inputChar]="c"></app-charter>
+          <p class="max">>> LIFEPOINTS LEFT : {{c.lifePoints}} </p>
         </div> 
+        <input type="submit" value="FIGHT" class="btn btn-primary fightbtn"
+        (click)="fightService.play(f.pg[0], f.pg[1])"
+        >
+        <div class="col">        
+          <p>{{fightService.log}}</p>        
+      </div>
   </div>
 
         

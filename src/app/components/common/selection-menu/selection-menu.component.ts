@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Charter } from 'src/app/classes/Character';
 import { SelectionpgService } from 'src/app/service/selectionpg.service';
 import { SelectService } from 'src/app/service/select.service';
+import { Fight } from 'src/app/classes/Fight';
 
 @Component({
   selector: 'app-selection-menu',
@@ -118,6 +119,8 @@ export class SelectionMenuComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.selectService.fights = [new Fight()];
+    //this.selectService.fights.push(new Fight());
   }
 
 }

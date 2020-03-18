@@ -7,11 +7,11 @@
         </div>
         <div class="row">
             <div class="col-1">
-                <input type="radio" id="male" name="gender" value="male" (click)="tournamentService.getNumFighters(4)">
+                <input type="radio" id="male" name="gender" value="male" (click)="selectService.getNumFighters(4)">
                 <label for="male"><h2>4</h2></label><br>
             </div>
             <div class="col-1">
-                <input type="radio" id="female" name="gender" value="female" (click)="tournamentService.getNumFighters(8)">
+                <input type="radio" id="female" name="gender" value="female" (click)="selectService.getNumFighters(8)">
                 <label for="female"><h2>8</h2></label><br>
             </div>
             <div class="col-1">
@@ -21,7 +21,8 @@
         </div>
         <div class="row">
             <div class="col-12">
-                    <input type="submit" class="input" value="Procedi" routerLink="/t-selection" class="btn btn-primary cx">
+                    <input type="submit" class="input" value="Procedi" routerLink="/selection-menu" class="btn btn-primary cx"
+                    (click)="selectService.setTVar()">
             </div>
             </div>
     </div>
