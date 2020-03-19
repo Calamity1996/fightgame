@@ -14,16 +14,12 @@
             <div class="row"  *ngFor="let f of selectService.fights; let i=index ;">
                 <div *ngFor = "let c of f.pg; let j=index">
                     <div class="col">          
-                        <p class="pg"> >> PERSONAGGIO {{i+j+1}}     </p> 
+                        <h1 class="font"> >> PERSONAGGIO {{i+j+1}}     </h1> 
                         <img src="{{c.urlimg}}" class="dimimg">
                     </div>
                 </div>
             </div> 
-            <input type="submit" routerLink="/fight" value="Combatti" class="btn btn-primary" >       
+            <input type="submit" routerLink="/fight" value="Combatti" class="btn btn-primary bg-warning" >       
         </div>  
-    </div>
-
-    <div class="row">
-        <div class="col"><input type="submit" routerLink="/fight" value="Combatti" class="btn btn-primary" ></div>
     </div>
 </div> 

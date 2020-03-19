@@ -2,82 +2,31 @@
      <div *ngIf = "!fightService.show()">
     <div class="row">
             <div class="col-12">
-            <div class="f"> Quanti giocatori totali? </div>
+            <div class="font dim"> Quanti giocatori totali? </div>
             </div>
         </div>
         <div class="row">
             <div class="col-1">
-                <input type="radio" id="male" name="gender" value="male" (click)="selectService.getNumFighters(4)">
-                <label for="male"><h2>4</h2></label><br>
+                <input type="radio" (click)="selectService.getNumFighters(4)">
+                <label><h2 class="font">4</h2></label><br>
             </div>
             <div class="col-1">
-                <input type="radio" id="female" name="gender" value="female" (click)="selectService.getNumFighters(8)">
-                <label for="female"><h2>8</h2></label><br>
+                <input type="radio" (click)="selectService.getNumFighters(8)">
+                <label><h2 class="font">8</h2></label><br>
             </div>
             <div class="col-1">
-                <input type="radio" disabled id="other" name="gender" value="other">
-                <label for="other"><h2>16 </h2></label>
+                <input type="radio" disabled >
+                <label><h2 class="font">16 </h2></label>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
-                    <input type="submit" class="input" value="Procedi" routerLink="/selection-menu" class="btn btn-primary cx"
+                    <input type="submit" value="Procedi" routerLink="/selection-menu" class="btn btn-primary bg-warning"
                     (click)="selectService.setTVar()">
             </div>
-            </div>
+        </div>
     </div>
  </div>
-<!------------------------------------------------------------------------------------------------------------------------------------------------->
-<!--
-<div class="container"> 
-    <div *ngIf = "fightService.show()">
-        
-        <div class="row" >
-            <div class="col-3" *ngFor="let c of tournamentService.mycharacters; let i = index;">
-                <div *ngIf=" tournamentService.isAliveYet[i]">
-                    <p class="pg">>> PLAYER {{i+1}}</p>
-                    <img src="{{c.urlimg}}" class="dimimg">
-            </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                    <input type="submit" class="input" value="FIGHT" class="btn btn-primary cx"
-                    (click)="tournamentService.startTournamentFights()"
-                    >
-            </div>
-        </div>
-
-        <div class="col">
-        
-            <p>{{fightService.log}}</p>
-          
-          </div>
-    </div>
-</div> 
--->
-<!--
-<div class="container"> 
-    <div *ngIf = "fightService.show()">
-       
-        <div class="row"  *ngFor="let go of tournamentService.cycle">
-            <div class="col-3" *ngFor="let c of tournamentService.mycharacters; let i = index;">
-                <div *ngIf=" tournamentService.isAliveYet[i]">
-                    <p class="pg">>> PLAYER {{i+1}}</p>
-                    <img src="{{c.urlimg}}" class="dimimg">
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                    <input type="submit" class="input" value="FIGHT" class="btn btn-primary cx"
-                    (click)="tournamentService.startTournamentFights()">
-            </div>
-        </div>
-    </div>
-</div> 
--->
-
 <div class="container ">
     <div *ngIf = "fightService.show()">
         

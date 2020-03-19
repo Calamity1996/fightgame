@@ -80,4 +80,8 @@ show = () : boolean => {
   return this.showTour;
 }
 
+progress = (initlife : number , currentlife : number) : number => {
+  return (currentlife * 100) / initlife ;
+}
+
 }

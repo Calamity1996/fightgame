@@ -1,17 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
-/*
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhai+2:400,500,600,700,800&display=swap');
+
 .html,body{
-    background-image: url("src\assets\img\environment\background_one.gif");
-    background-repeat: no-repeat center top;   
+    background-color: #333333; 
     width: 100%;
     height: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
     z-index: -1;
 }
-*/
+
+.container-fluid{
+    padding-left: 0;
+    padding-right: 0;
+}
 .head{
     background-image: url("src\assets\img\logo.png");
 }

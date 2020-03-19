@@ -1,3 +1,4 @@
+
 .img2{
     width: 40%;
     height: auto;
@@ -53,4 +54,11 @@ li{
 
   .max{
     font-size: 15pt;
+  }
+
+  .left{
+    font-family: 'Baloo Bhai 2';
+    font-weight: 600;
+    font-size: 17pt;
+    color : rgb(252, 167, 9);
   }
