@@ -1,11 +1,11 @@
  <div class="container1"> 
-     <div *ngIf = "!fightService.show()">
+     
     <div class="row">
             <div class="col-12">
-            <div class="font dim"> Quanti giocatori totali? </div>
+            <div class="font dim pos"> ► Quanti giocatori totali? </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row pos">
             <div class="col-1">
                 <input type="radio" (click)="selectService.getNumFighters(4)">
                 <label><h2 class="font">4</h2></label><br>
@@ -19,19 +19,11 @@
                 <label><h2 class="font">16 </h2></label>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12">
-                    <input type="submit" value="Procedi" routerLink="/selection-menu" class="btn btn-primary bg-warning"
-                    (click)="selectService.setTVar()">
-            </div>
+        
+    </div>
+    <div class="row">
+        <div class="col-12">
+                <input type="submit" value="Procedi" routerLink="/selection-menu" class="btn btn-primary bg-warning pos"
+                (click)="selectService.setTVar()">
         </div>
-    </div>
  </div>
-<div class="container ">
-    <div *ngIf = "fightService.show()">
-        
-            <app-fight >  </app-fight>
-        
-        
-    </div>
-</div>

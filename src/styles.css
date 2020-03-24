@@ -2,7 +2,8 @@
 @import url('https://fonts.googleapis.com/css?family=Baloo+Bhai+2:400,500,600,700,800&display=swap');
 
 .html,body{
-    background-color: #333333; 
+    /*background-color: #333333; */
+    background-color: rgb(29, 2, 41);
     width: 100%;
     height: 100%;
     z-index: -1;

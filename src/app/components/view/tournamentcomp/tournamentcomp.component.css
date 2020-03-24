@@ -12,10 +12,7 @@ p{
     padding-top: 1%;
     
 }
-.input{
-    border: 1px solid red;
-    background-color: tomato;
-}
+
 
 .row{
     margin-bottom: 2%;
@@ -30,17 +27,22 @@ p{
     font-weight: 600;
     font-size: 18pt;
     color : rgb(252, 167, 9);
-    display: flex;
-    justify-content: center;
 
+}
+.pos{
+    position: relative;
+    left: 400px;
+    top: 100px;
 }
 
 .dim{
     font-size: 22pt;
+    
 }
 .bg-warning{
-    position: absolute;
-    right : 75%;
-    width: 120px;
-    height: 60px;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    left : 550px;
 }

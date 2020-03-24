@@ -2,24 +2,22 @@
     <div class="row" >    
            <div class="col-8">   
                <div class="row" > 
-                   <div class="col-3" *ngFor="let charter of chart">
-                    <app-charter [inputChar]="charter"></app-charter>  
-                    <div *ngIf="selectionpgService.fightStart()">
-                        <div routerLink="/fight"></div>
-                    </div>
+                   <div class="col-2" *ngFor="let charter of chart">
+                    <app-charter [inputChar]="charter"></app-charter>    
+                   <!-- <img src="{{charter.urlimg}}" class="clickable card dimcard"> -->
                 </div> 
             </div>
         </div>  
-        <div class="col-4">
+        <div class="col-4"> <h1 class="font a"> Selected.. </h1>
             <div class="row"  *ngFor="let f of selectService.fights; let i=index ;">
-                <div *ngFor = "let c of f.pg; let j=index">
-                    <div class="col">          
-                        <h1 class="font"> >> PERSONAGGIO {{i+j+1}}     </h1> 
+                <div class="row allinea" *ngFor = "let c of f.pg; let j=index">
+                          
+                        <h1 class="font"> >> PERSONAGGIO {{i*2+j+1}}     </h1> 
                         <img src="{{c.urlimg}}" class="dimimg">
-                    </div>
+                   
                 </div>
-            </div> 
-            <input type="submit" routerLink="/fight" value="Combatti" class="btn btn-primary bg-warning" >       
+            </div>       
         </div>  
+        <input type="submit" routerLink="/fight" value="Combatti" class="btn btn-primary bg-w" > 
     </div>
 </div> 

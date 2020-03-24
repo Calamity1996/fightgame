@@ -1,19 +1,36 @@
 <div class="container">
   <div class="row"  *ngFor="let f of selectService.fights; let i=index ;">
-        <div class="col-4" *ngFor = "let c of f.pg; let j=index">
+        <div class="col-6" *ngFor = "let c of f.pg; let j=index">
           <!-- per adesso stampo l'img e lo status, dopo aggiusto con fighting-->
           <div class="progress">
             <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar"
              aria-valuenow="fightService.progress(1600,100)" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
           </div>
-          <app-charter [inputChar]="c"></app-charter>
-          <p class="left">>> LIFEPOINTS LEFT : {{c.lifePoints}} </p>
+          
+            <app-charter [inputChar]="c"></app-charter>
+            <!--<input type="submit" value="FIGHT{{j+1}}" class="btn btn-primary fightbtn position">-->
+
+          <h1 class="left"> >> 
+            <span style="text-decoration: underline;"> LIFEPOINTS LEFT : {{c.lifePoints}} ♥ 
+            </span>
+          </h1>
         </div> 
-        <input type="submit" value="FIGHT" class="btn btn-primary fightbtn"
-        (click)="fightService.play(f.pg[0], f.pg[1])"
-        >
+        <input type="submit" value="FIGHT{{i+1}}" class="btn btn-primary fightbtn position1"
+        (click)="fightService.pg1turnPlay(f.pg[0])">
+        <input type="submit" value="FIGHT{{i+2}}" class="btn btn-primary fightbtn position2"
+        (click)="fightService.pg2turnPlay(f.pg[1])">
+        <!--
+        <div class="col-2">
+          <input type="submit" value="FIGHT" class="btn btn-primary fightbtn"
+          (click)="fightService.play(f.pg[0],g.pg[1])"
+          >
+        </div>
+        -->
+      </div>
+      <div class="row">
         <div class="col">        
-          <p>{{fightService.log}}</p>        
+          <textarea readonly class="form-control rounded-0" rows="10" style="background-color: rgba(247, 7, 227, 0.438); color:yellow;"
+          placeholder="Inizia la battaglia!"> {{fightService.log}} </textarea>
       </div>
   </div>
 </div>

@@ -111,6 +111,105 @@ export class SelectionMenuComponent implements OnInit {
       int : 85,
       skill : false,
       urlimg : "/assets/img/charter/charter9.png"
+    },
+    {
+      name : "Atlantis",
+      charId : 10,
+      lifePoints : 2000,
+      str : 40,
+      def : 50,
+      dex : 80,
+      int : 85,
+      skill : false,
+      urlimg : "/assets/img/charter/charter10.png"
+    },
+    {
+      name : "Atlantis",
+      charId : 11,
+      lifePoints : 2000,
+      str : 40,
+      def : 50,
+      dex : 80,
+      int : 85,
+      skill : false,
+      urlimg : "/assets/img/charter/charter11.png"
+    },
+    {
+      name : "Atlantis",
+      charId : 12,
+      lifePoints : 2000,
+      str : 40,
+      def : 50,
+      dex : 80,
+      int : 85,
+      skill : false,
+      urlimg : "/assets/img/charter/charter12.png"
+    },
+    {
+      name : "Atlantis",
+      charId : 13,
+      lifePoints : 2000,
+      str : 40,
+      def : 50,
+      dex : 80,
+      int : 85,
+      skill : false,
+      urlimg : "/assets/img/charter/charter13.png"
+    },
+    {
+      name : "Atlantis",
+      charId : 14,
+      lifePoints : 2000,
+      str : 40,
+      def : 50,
+      dex : 80,
+      int : 85,
+      skill : false,
+      urlimg : "/assets/img/charter/charter14.png"
+    },
+    {
+      name : "Atlantis",
+      charId : 15,
+      lifePoints : 2000,
+      str : 40,
+      def : 50,
+      dex : 80,
+      int : 85,
+      skill : false,
+      urlimg : "/assets/img/charter/charter15.png"
+    },
+    {
+      name : "Atlantis",
+      charId : 16,
+      lifePoints : 2000,
+      str : 40,
+      def : 50,
+      dex : 80,
+      int : 85,
+      skill : false,
+      urlimg : "/assets/img/charter/charter16.png"
+    },
+    {
+      name : "Atlantis",
+      charId : 17,
+      lifePoints : 2000,
+      str : 40,
+      def : 50,
+      dex : 80,
+      int : 85,
+      skill : false,
+      urlimg : "/assets/img/charter/charter17.png"
+    },
+    {
+      name : "Atlantis",
+      charId : 18,
+      lifePoints : 2000,
+      str : 40,
+      def : 50,
+      dex : 80,
+      int : 85,
+      skill : false,
+      urlimg : "/assets/img/charter/charter18.png"
     }
   ];
   constructor(

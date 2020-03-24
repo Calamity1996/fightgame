@@ -32,6 +32,13 @@
     color : rgb(252, 167, 9);
 }
 .pos{
-    display: flex;
-    justify-content: center;
+    /*display: flex;
+    justify-content: center;*/
+    position: relative;
+    left: 300px;
+    top: 100px;
+}
+.clickable:hover{
+    background-color: rgba(137, 43, 226, 0.13);
+    border-radius: 50%;
 }
